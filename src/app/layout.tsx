@@ -1,17 +1,11 @@
 import React from 'react';
 import { seoData } from '@/lib/content/portfolio';
-import ThemeProvider from '@/lib/hooks/use-theme';
 import fontVariables from '@/lib/utils/fonts';
-import dynamic from 'next/dynamic';
 import Script from 'next/script';
+import ClientLayout from './ClientLayout';
 
 import '../styles/globals.css';
 import type { Metadata } from 'next';
-
-// Dynamically import Cursor to avoid SSR issues (it uses document API)
-const Cursor = dynamic(() => import('@/components/ui/Cursor'), {
-  ssr: false,
-});
 
 export const metadata: Metadata = {
   title: seoData.title,
@@ -98,8 +92,7 @@ export default function RootLayout({
             `,
           }}
         />
-        <Cursor className="hidden dark:lg:block" />
-        <ThemeProvider>{children}</ThemeProvider>
+        <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
   );

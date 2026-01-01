@@ -21,6 +21,16 @@ const nextConfig = {
       '@': path.resolve(__dirname, 'src'),
     };
     
+    // Fix for framer-motion during server-side build
+    if (isServer) {
+      config.externals = config.externals || [];
+      // Don't externalize framer-motion, but ensure it's handled properly
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        'framer-motion': path.resolve(__dirname, 'node_modules/framer-motion'),
+      };
+    }
+    
     return config;
   },
   eslint: {
@@ -28,9 +38,7 @@ const nextConfig = {
   },
 
   // Ensure proper transpilation
-  transpilePackages: ['@lottiefiles/react-lottie-player'],
-  // Disable static page generation for debugging
-  // output: 'export', // Uncomment if you want static export
+  transpilePackages: ['@lottiefiles/react-lottie-player', 'framer-motion'],
 };
 
 module.exports = nextConfig;
