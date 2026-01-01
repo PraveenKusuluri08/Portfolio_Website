@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Color variables for future use */
+  :root {
+    --color-bg: theme(colors.gray.50); /* Light neutral background */
+    --color-bg-secondary: theme(colors.white); /* Clean white for secondary elements */
+    --color-accent: theme(colors.amber.600); /* Warm amber accent for professionalism */
+    --color-accent-light: theme(colors.amber.600/0.1); /* Subtle highlight for accents */
+    --color-accent-torch: theme(colors.amber.700/0.15); /* Warm, subdued torch-like accent */
+    --color-text: theme(colors.gray.700); /* Dark gray for readable text */
+    --color-dark-1: theme(colors.gray.900); /* Rich dark gray for high contrast */
+    --color-dark-2: theme(colors.gray.700); /* Medium gray for depth */
+    --color-dark-3: theme(colors.gray.400); /* Light gray for subtle contrast */
+  }
+  
+
+  /* Dark Theme */
+  .dark {
+    --color-bg: theme(colors.gray.900); /* Dark background */
+    --color-bg-secondary: theme(colors.gray.800); /* Slightly lighter background */
+    --color-accent: theme(colors.amber.500); /* Gold-like accent for a professional look */
+    --color-accent-light: theme(colors.amber.500/0.1); /* Subtle highlight for accents */
+    --color-text: theme(colors.gray.200); /* Light gray for text readability */
+    --color-dark-1: theme(colors.gray.300); /* Soft gray for contrast */
+    --color-dark-2: theme(colors.gray.400); /* Medium gray for additional contrast */
+    --color-dark-3: theme(colors.gray.600); /* Dark gray for subtle variations */
+  }
+  
+
+  @font-face {
+    font-family: 'agustina';
+    src: url('/fonts/Agustina-Signature.otf') format('opentype');
+  }
+
+  * {
+    @apply focus:outline-dashed outline-[3px] outline-offset-4 outline-accent;
+  }
+}
+
+/* TYPOGRAPHY */
+
+.heading-secondary {
+  @apply text-3xl sm:text-4xl capitalize font-medium mb-8 sm:mb-12 text-dark-2;
+}
+
+/* Gradient Animation */
+@keyframes gradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 3s ease infinite;
+}
