@@ -1,4 +1,4 @@
-import { Sidebar } from '@/components';
+import Sidebar from '@/components/ui/Sidebar';
 
 import SocialLinks from './SocialLinks';
 

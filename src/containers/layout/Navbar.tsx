@@ -4,7 +4,10 @@ import { author } from "@/lib/content/portfolio";
 import useWindowWidth from "@/lib/hooks/use-window-width";
 import { getBreakpointsWidth } from "@/lib/utils/helper";
 
-import { Button, DarkModeButton, Link as CLink, NavButton } from "@/components";
+import Button from "@/components/buttons/Button";
+import DarkModeButton from "@/components/buttons/DarkModeButton";
+import CLink from "@/components/buttons/Link";
+import NavButton from "@/components/buttons/NavButton";
 
 import { fadeIn, slideIn } from "@/styles/animations";
 

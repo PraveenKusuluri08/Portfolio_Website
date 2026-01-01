@@ -1,4 +1,7 @@
-import { Email, Footer, Navbar, Social } from '@/containers';
+import Email from '@/containers/Email';
+import Footer from '@/containers/layout/Footer';
+import Navbar from '@/containers/layout/Navbar';
+import Social from '@/containers/Social';
 
 type Props = {
   children: React.ReactNode;

@@ -1,6 +1,6 @@
 import { socialSection } from '@/lib/content/social';
 
-import { SocialIcon } from '@/components';
+import SocialIcon from '@/components/socials/SocialIcon';
 
 const SocialLinks = ({ className = '' }: { className?: string }) => {
   const { socialLinks } = socialSection;
