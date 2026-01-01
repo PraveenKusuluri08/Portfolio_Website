@@ -1,7 +1,8 @@
 'use client';
 
-import { Button, ShowLottie } from '@/components';
-import { Layout } from '@/containers';
+import Button from '@/components/buttons/Button';
+import ShowLottie from '@/components/ui/ShowLottie';
+import Layout from '@/containers/layout/Layout';
 
 const NotFound = () => {
   return (
