@@ -1,3 +1,4 @@
+import React from 'react';
 import Email from '@/containers/Email';
 import Footer from '@/containers/layout/Footer';
 import Navbar from '@/containers/layout/Navbar';

@@ -1,3 +1,4 @@
+import React from 'react';
 import About from '@/containers/About';
 import Contact from '@/containers/Contact';
 import Experience from '@/containers/Experience';
