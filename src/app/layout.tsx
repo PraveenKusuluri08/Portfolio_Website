@@ -1,4 +1,3 @@
-import React from 'react';
 import { seoData } from '@/lib/content/portfolio';
 import fontVariables from '@/lib/utils/fonts';
 import Script from 'next/script';

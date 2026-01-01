@@ -4,9 +4,9 @@ import { notFound } from 'next/navigation';
 import ProjectDetail from '@/containers/ProjectDetail';
 
 type Props = {
-  params: Promise<{
+  params: {
     slug: string;
-  }>;
+  };
 };
 
 export async function generateStaticParams() {
@@ -18,8 +18,7 @@ export async function generateStaticParams() {
 }
 
 export default async function ProjectPage({ params }: Props) {
-  const { slug } = await params;
-  const project = findProjectBySlug(slug, projectsSection.projects);
+  const project = findProjectBySlug(params.slug, projectsSection.projects);
 
   if (!project) {
     notFound();

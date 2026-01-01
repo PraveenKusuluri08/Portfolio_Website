@@ -30,6 +30,8 @@ const nextConfig = {
   },
   // Ensure proper transpilation
   transpilePackages: ['@lottiefiles/react-lottie-player', 'framer-motion'],
+  // Disable static optimization for problematic pages if needed
+  // output: 'standalone',
 };
 
 module.exports = nextConfig;
