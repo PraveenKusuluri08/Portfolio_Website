@@ -19,21 +19,14 @@ const Wrapper = ({
   animate = true,
   ...rest
 }: Props & MotionProps) => {
+  const baseClassName = `py-24 md:py-32 ${className}`;
+
+  // Always use motion.section when animate is true to avoid build issues
   if (animate) {
-    const MotionTag = motion(as);
-
-    return (
-      <MotionTag id={id} className={`py-24 md:py-32 ${className}`} {...rest}>
-        {children}
-      </MotionTag>
-    );
-  }
-
-  if (as === 'section') {
     return (
       <motion.section
         id={id}
-        className={`py-24 md:py-32 ${className}`}
+        className={baseClassName}
         {...rest}
       >
         {children}
@@ -41,10 +34,10 @@ const Wrapper = ({
     );
   }
 
-  const CustomTag = `${as}` as ElementType;
-
+  // Use the specified tag when animate is false
+  const CustomTag = as as ElementType;
   return (
-    <CustomTag id={id} className={`py-24 md:py-32 ${className}`} {...rest}>
+    <CustomTag id={id} className={baseClassName} {...rest}>
       {children}
     </CustomTag>
   );

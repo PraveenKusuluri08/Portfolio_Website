@@ -12,15 +12,12 @@ const nextConfig = {
         fs: false,
       };
     }
-    // Ensure proper module resolution
-    config.resolve.extensionAlias = {
-      '.js': ['.js', '.ts', '.tsx'],
-      '.jsx': ['.jsx', '.tsx'],
-    };
     return config;
   },
   // Ensure proper transpilation
   transpilePackages: ['@lottiefiles/react-lottie-player'],
+  // Disable static optimization for problematic pages if needed
+  // But let's try without this first
 };
 
 module.exports = nextConfig;
