@@ -1,7 +1,8 @@
 'use client';
 import { ProjectType } from '@/lib/types';
 import { blurImageURL } from '@/lib/utils/config';
-import { Button, Wrapper } from '@/components';
+import Button from '@/components/buttons/Button';
+import Wrapper from '@/components/ui/Wrapper';
 import { Icon } from '@iconify/react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';

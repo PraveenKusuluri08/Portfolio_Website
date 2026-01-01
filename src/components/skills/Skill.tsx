@@ -2,7 +2,9 @@
 import { SoftwareSkillType } from '@/lib/types';
 import { getId } from '@/lib/utils/helper';
 
-import { ListItem, ShowLottie, SkillIcon } from '@/components';
+import ListItem from '@/components/lists/ListItem';
+import ShowLottie from '@/components/ui/ShowLottie';
+import SkillIcon from '@/components/skills/SkillIcon';
 
 import { motion, MotionProps, Variants } from 'framer-motion';
 

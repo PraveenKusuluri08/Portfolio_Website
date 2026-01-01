@@ -3,7 +3,9 @@ import { projectsSection } from '@/lib/content/projects';
 import { PROJECTS_INITIALLY } from '@/lib/utils/config';
 import { sortByYear } from '@/lib/utils/helper';
 
-import { Button, ProjectCard, Wrapper } from '@/components';
+import Button from '@/components/buttons/Button';
+import ProjectCard from '@/components/ui/ProjectCard';
+import Wrapper from '@/components/ui/Wrapper';
 
 import { getSectionAnimation, projectVariants } from '@/styles/animations';
 

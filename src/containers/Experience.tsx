@@ -1,5 +1,5 @@
 'use client';
-import { TabList } from '@/components';
+import TabList from '@/components/lists/TabList';
 
 import { experienceSection } from '../lib/content/experience';
 import { getSectionAnimation } from '../styles/animations';

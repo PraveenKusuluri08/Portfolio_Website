@@ -3,7 +3,8 @@ import { heroSection } from '@/lib/content/hero';
 import useWindowWidth from '@/lib/hooks/use-window-width';
 import { getBreakpointsWidth } from '@/lib/utils/helper';
 
-import { Button, Wrapper } from '@/components';
+import Button from '@/components/buttons/Button';
+import Wrapper from '@/components/ui/Wrapper';
 
 import { slideUp } from '@/styles/animations';
 

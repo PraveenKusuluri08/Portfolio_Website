@@ -3,7 +3,8 @@ import { contactSection } from '@/lib/content/contact';
 import { socialSection } from '@/lib/content/social';
 import { author } from '@/lib/content/portfolio';
 
-import { Button, Wrapper } from '@/components';
+import Button from '@/components/buttons/Button';
+import Wrapper from '@/components/ui/Wrapper';
 
 import { getSectionAnimation, slideUp } from '@/styles/animations';
 import { motion } from 'framer-motion';

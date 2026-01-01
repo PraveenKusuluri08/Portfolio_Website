@@ -3,7 +3,8 @@ import useWindowWidth from '@/lib/hooks/use-window-width';
 import { ExperienceType } from '@/lib/types';
 import { getBreakpointsWidth, getId } from '@/lib/utils/helper';
 
-import { Link, ListItem } from '@/components';
+import Link from '@/components/buttons/Link';
+import ListItem from '@/components/lists/ListItem';
 
 import { useState } from 'react';
 

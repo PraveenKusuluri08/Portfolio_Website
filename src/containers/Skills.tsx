@@ -2,7 +2,8 @@
 import { skillsSection } from '@/lib/content/skills';
 import { useTheme } from '@/lib/hooks/use-theme';
 
-import { Skill, Wrapper } from '@/components';
+import Skill from '@/components/skills/Skill';
+import Wrapper from '@/components/ui/Wrapper';
 
 import { getSectionAnimation, slideUp } from '@/styles/animations';
 import { motion } from 'framer-motion';

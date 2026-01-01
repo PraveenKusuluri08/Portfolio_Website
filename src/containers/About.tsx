@@ -2,7 +2,9 @@
 import { aboutSection } from '@/lib/content/about';
 import { author } from '@/lib/content/portfolio';
 
-import { AuthorImage, Link, Wrapper } from '@/components';
+import AuthorImage from '@/components/ui/AuthorImage';
+import Link from '@/components/buttons/Link';
+import Wrapper from '@/components/ui/Wrapper';
 
 import { getSectionAnimation, slideUp, fadeIn } from '@/styles/animations';
 
