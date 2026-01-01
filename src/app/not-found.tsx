@@ -1,3 +1,5 @@
+'use client';
+
 import { Button, ShowLottie } from '@/components';
 import { Layout } from '@/containers';
 

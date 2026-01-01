@@ -17,7 +17,7 @@ export async function generateStaticParams() {
     }));
 }
 
-export default function ProjectPage({ params }: Props) {
+export default async function ProjectPage({ params }: Props) {
   const project = findProjectBySlug(params.slug, projectsSection.projects);
 
   if (!project) {
