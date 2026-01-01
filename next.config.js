@@ -21,18 +21,12 @@ const nextConfig = {
       '@': path.resolve(__dirname, 'src'),
     };
     
-    // Ensure proper handling of client components
-    config.resolve.extensionAlias = {
-      '.js': ['.js', '.ts', '.tsx'],
-      '.jsx': ['.jsx', '.tsx'],
-    };
-    
     return config;
   },
   // Ensure proper transpilation
   transpilePackages: ['@lottiefiles/react-lottie-player'],
-  // Disable static optimization temporarily to debug
-  // output: 'standalone', // Uncomment if needed
+  // Disable static page generation for debugging
+  // output: 'export', // Uncomment if you want static export
 };
 
 module.exports = nextConfig;
