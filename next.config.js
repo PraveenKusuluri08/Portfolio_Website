@@ -2,6 +2,8 @@
 const path = require('path');
 
 const nextConfig = {
+  // Explicitly disable Turbopack to use Webpack (required for custom webpack config)
+  turbopack: false,
   reactStrictMode: true,
   swcMinify: true,
   experimental: {
@@ -21,22 +23,11 @@ const nextConfig = {
       '@': path.resolve(__dirname, 'src'),
     };
     
-    // Fix for framer-motion during server-side build
-    if (isServer) {
-      config.externals = config.externals || [];
-      // Don't externalize framer-motion, but ensure it's handled properly
-      config.resolve.alias = {
-        ...config.resolve.alias,
-        'framer-motion': path.resolve(__dirname, 'node_modules/framer-motion'),
-      };
-    }
-    
     return config;
   },
   eslint: {
     ignoreDuringBuilds: true,
   },
-
   // Ensure proper transpilation
   transpilePackages: ['@lottiefiles/react-lottie-player', 'framer-motion'],
 };
