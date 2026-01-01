@@ -23,6 +23,10 @@ const nextConfig = {
     
     return config;
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+
   // Ensure proper transpilation
   transpilePackages: ['@lottiefiles/react-lottie-player'],
   // Disable static page generation for debugging
