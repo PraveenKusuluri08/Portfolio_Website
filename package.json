@@ -1,14 +1,14 @@
 {
   "private": true,
   "scripts": {
-    "dev": "NODE_OPTIONS='--no-warnings' next dev",
-    "build": "NODE_OPTIONS='--no-warnings' next build",
-    "start": "NODE_OPTIONS='--no-warnings' next start",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "next lint",
     "lint:fix": "eslint src --fix && npm run format",
-    "prepare": "husky install"
+    "prepare": "husky install || true"
   },
   "dependencies": {
     "@lottiefiles/react-lottie-player": "^3.5.0",
