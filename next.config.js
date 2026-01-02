@@ -2,8 +2,6 @@
 const path = require('path');
 
 const nextConfig = {
-  // Explicitly disable Turbopack to use Webpack (required for custom webpack config)
-  turbopack: false,
   reactStrictMode: true,
   swcMinify: true,
   experimental: {
@@ -23,10 +21,24 @@ const nextConfig = {
       '@': path.resolve(__dirname, 'src'),
     };
     
+    // Suppress webpack warnings
+    config.ignoreWarnings = [
+      { module: /node_modules/ },
+      { file: /node_modules/ },
+    ];
+    
+    // Suppress specific warnings
+    config.infrastructureLogging = {
+      level: 'error',
+    };
+    
     return config;
   },
   eslint: {
     ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: false,
   },
   // Ensure proper transpilation
   transpilePackages: ['@lottiefiles/react-lottie-player', 'framer-motion'],

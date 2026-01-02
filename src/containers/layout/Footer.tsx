@@ -1,3 +1,5 @@
+'use client';
+
 import { footerSection } from '@/lib/content/footer';
 
 import SocialLinks from '../Social/SocialLinks';

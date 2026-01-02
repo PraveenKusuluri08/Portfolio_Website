@@ -17,5 +17,5 @@ export const aboutSection: AboutSectionType = {
         "PostgreSQL"
     ],
     },
-    img: '/Praveen.jpeg',
+    img: '/Praveen_Kusuluri.jpeg',
 };

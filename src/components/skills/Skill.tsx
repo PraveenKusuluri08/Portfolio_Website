@@ -119,15 +119,15 @@ const Skill = ({
           </h4>
           <ul className="space-y-2 text-sm">
             {points.map((point, index) => (
-              <motion.li
+              <ListItem
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 + index * 0.1 }}
               >
-                <ListItem>{point}</ListItem>
-              </motion.li>
+                {point}
+              </ListItem>
             ))}
           </ul>
         </div>

@@ -91,6 +91,22 @@ export default function RootLayout({
             `,
           }}
         />
+        <Script
+          id="suppress-warnings"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function () {
+                if (typeof console !== 'undefined') {
+                  const originalWarn = console.warn;
+                  console.warn = function() {
+                    // Suppress warnings in console
+                  };
+                }
+              })();
+            `,
+          }}
+        />
         <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
